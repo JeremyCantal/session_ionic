@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item lines="none">
+    <ion-toggle (ionChange)="onClick($event)" slot="start">Dark Mode</ion-toggle>
+  </ion-item>
+
+  <ion-Card>
+    <ion-Card-Header>
+      <ion-Card-Subtitle>Card Subtitle</ion-Card-Subtitle>
+      <ion-Card-Title>Card Title</ion-Card-Title>
+    </ion-Card-Header>
+
+    <ion-Card-Content>
+      <img src="./assets/img/mars1.jpg">
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-Card-Content>
+  </ion-Card>
+
+  <ion-list>
+      <ion-item *ngFor="let info of data" class="col-md-4">
+        <ion-label>
+            {{ info.title }} <br> {{ info.description }} <br> 
+            <ion-avatar slot="start">
+              <img [src]="info.icon">
+    
+            </ion-avatar>
+          </ion-label>
+      </ion-item>
+  </ion-list>
+  
+</ion-content>
