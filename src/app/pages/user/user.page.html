@@ -9,12 +9,14 @@
 
 <ion-content>
 
-  <ion-list>
-    <ion-item *ngFor="let l of users">
-      <ion-label>
-        {{ l.username }} : {{ l.email }} => {{ l.password }}
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card *ngFor="let l of users">
+    <ion-card-header>
+      <ion-card-title>{{ l.username }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      e-mail : {{ l.email }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
